@@ -10,7 +10,7 @@ double getAbsoluteScale(int frame_id, int sequence_id, double z_cal)
 {
   string line;
   int i = 0;
-  ifstream myfile("/home/hemang/Downloads/home/dataset/sequences/00/00.txt");
+  ifstream myfile("/home/hemang/Downloads/home/dataset/sequences/00/00.txt"); // add your own path where 00.txt is stored in youe system 
   double x = 0, y=0, z=0;
   double xprev, yprev, zprev;
   if (myfile.is_open()) {
@@ -51,7 +51,7 @@ int main(int argc, char** argv)
   double scale = 1.00;
   char filename1[400];
   char filename2[400];
-  sprintf(filename1, "/home/hemang/Downloads/home/dataset/sequences/00/image_2/%06d.png", 0);
+  sprintf(filename1, "/home/hemang/Downloads/home/dataset/sequences/00/image_2/%06d.png", 0); // replace "/home/hemang/Downloads/home/" with your path where these image files are stored 
   sprintf(filename2, "/home/hemang/Downloads/home/dataset/sequences/00/image_2/%06d.png", 1);
 
   char text[120];

@@ -73,11 +73,11 @@ int main(int argc, char** argv)
 
   //calculation of Pose from Essential matrix here
   Mat E, R , t, mask;
-  E = findEssentialMat(points2, points1, focal, pp, RANSAC, 0.999, 1.0, mask);
-  recoverPose(E, points2, points1, R, t, focal, pp, mask);
+  E = findEssentialMat(points2, points1, focal, pp, RANSAC, 0.999, 1.0, mask); \\Essential matrix calculation 
+  recoverPose(E, points2, points1, R, t, focal, pp, mask); \\ SVD opeartion using opencv function 
   cout << "R = " << R << endl;
-  cout << "t = " << t << endl;
-  cout << "E = " << E << endl;
+  cout << "t = " << t << endl; \\ please note this t is not upto scale 
+  \\ cout << "E = " << E << endl;
 
   Mat prevImage = img_2;
   Mat currImage;

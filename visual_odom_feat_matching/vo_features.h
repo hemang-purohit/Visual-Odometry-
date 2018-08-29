@@ -26,7 +26,7 @@ void featureDetectionAndMatching(Mat img_1, Mat img_2, vector<Point2f>& points1,
 {
   //int nfeatures = 150;
   int minHessian = 400;
-  Ptr<SURF> detector = SURF::create(minHessian); //create SIFT operator
+  Ptr<SURF> detector = SURF::create(minHessian); //create SURF operator
 
   std::vector<KeyPoint> keypoints_1, keypoints_2;
   Mat descriptors_1, descriptors_2;
